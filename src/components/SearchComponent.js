@@ -24,7 +24,7 @@ const SearchComponent = () => {
     setResults([]);
     setIsLoading(true);
     const url = query ? `https://hn.algolia.com/api/v1/search?query=${query}&tags=story` :
-      'http://hn.algolia.com/api/v1/search?tags=front_page';
+      'https://hn.algolia.com/api/v1/search?tags=front_page';
 
     const result = await axios(url);
     const cleanup = result.data.hits.filter(result => result.url)
